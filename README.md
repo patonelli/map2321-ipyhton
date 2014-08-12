@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 =======
-map2321-ipyhton
+map2321 Técnicas em teoria de controle
 ===============
 
-Arquivos para a disciplina de controle
->>>>>>> 4852bcd35733fa570dafab3eb90d0ccf79014532
+Arquivos para a disciplina de controle. O site para esta disciplina é
+(http://disciplinas.stoa.usp.br/course/view.php?id=4043) 

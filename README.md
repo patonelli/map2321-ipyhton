@@ -1,3 +1,7 @@
-# Técnicas em Teoria de Controle
+<<<<<<< HEAD
+=======
+map2321-ipyhton
+===============
 
-A página desta disciplina está em 
+Arquivos para a disciplina de controle
+>>>>>>> 4852bcd35733fa570dafab3eb90d0ccf79014532

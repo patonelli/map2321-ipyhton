@@ -1,0 +1,14 @@
+size(4.0cm,4.0cm);
+unitsize(1.0cm);
+draw(circle((2,2),2));
+real theta=3.14/6;
+pair z = (2+2*sin(theta), 2-2*cos(theta));
+draw((2,2)--z);
+draw((2,2)--(2,0),dashed);
+fill(circle(z,0.2),blue);
+dot((2,2),red);
+dot((2,4));
+label("$\theta$",(2,1),NE);
+label("O",(2,2),NE);
+label("M",z,SE);
+label("L",(2+sin(theta),1),NE);

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+
+\parindent=0pt
+
+ \addtolength{\textheight}{3.5cm}
+ \addtolength{\oddsidemargin}{-1cm}
+ \addtolength{\evensidemargin}{-1cm}
+ \addtolength{\textwidth}{2cm}
+ \addtolength{\topmargin}{-2.0cm}
+\newcounter{questao}
+\newcommand{\quest}{\stepcounter{questao}{\bf \arabic{questao}.\ }}
+
+\begin{document}
+\hrule
+ {  \sf  Lista de exercícios de MAP2321 \hfill \fbox{2-15}}
+\hrule
+
+\vspace{0.5cm}
+
+\thispagestyle{empty}
+
+\quest Verificar a controlabilidade e colocar na forma normal de Kalman os pares $(A,B)$ dados abaixo.
+
+\begin{gather*}
+  A=
+  \begin{pmatrix}
+    -22.2 & -10.6 & -25.2\\
+   5.2  &  2.6  &  7.2 \\
+  16.6 &   7.8 &  18.6
+\end{pmatrix}\text{ e } B=
+\begin{pmatrix}
+  -0.8\\
+  0.8\\
+  0.4\\
+\end{pmatrix}
+\end{gather*}
+
+\quest Sejam $A$ uma matriz $n\times n$ e $B$ uma matriz $n\times m$. Defimos $V\subset \mathbb{R}^n$ como o menor subespaço de $\mathbb{R}^n$ que contém a imagem de $B$ e é invariante por $A$. Mostre que o par $(A,B)$ é controlável se, e somente se $V=\mathbb{R}^n$. 
+
+\quest Verifique se o seguinte sistema linear é observável:
+\begin{eqnarray*}
+  \dot{x}_1 &=& 2x_1 -x_2 +x_3 + u_1 \\
+  \dot{x}_2&=& x_2 +4x_3 \\
+  \dot{x_3} &=& -x_1 +2x_3 +u_2 \\
+ & & \\[-1em]
+y&=& x_1+x_2
+\end{eqnarray*}
+
+\quest Considere a matriz $A$ abaixo. Calcule $\omega(A)$ e, se possível um número positivo $M$ tal que $||\text{e}^{tA}x|| \leq M\text{e}^{5t}||x||$ para todo $x$ e $t>0$.
+\begin{gather}
+  A=
+  \begin{pmatrix}
+    2 & -1 \\ 5 & 5
+  \end{pmatrix}
+\end{gather}
+
+\quest Suponha que $\lambda_1 = -2\mathbf{i}$ esteja no espectro da matriz $A$, então existe um vetor $x_o$ de $\mathbb{R}^n$ tal que $\| \text{e}^{tA}x_0\|$ não vai a zero quando $t$ vai a infinito.
+
+\quest Verifique se o polinômio $p(x) = x^6 +120 x^5 + 650 x^4 + 20 x^3 + 16x^2 +248x + 6 $ é estável.
+
+\quest Use a matriz de Hurwitz para dar uma condição necessária e suficiente para a estabilidade de um polinômio de grau 4.
+
+\quest
+
+\quest
+
+\quest
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

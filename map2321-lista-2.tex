@@ -65,11 +65,32 @@ y&=& x_1+x_2
 
 \quest Use a matriz de Hurwitz para dar uma condição necessária e suficiente para a estabilidade de um polinômio de grau 4.
 
-\quest
+\quest $A$ e $B$ são as matrizes dadas abaixo. Verifique que $(A,B)$ é controlável. Ache o polinômio característico de $A$ na forma $p(\lambda)= \lambda^3 + a_1\lambda^2 + a_2\lambda + a_3$ e ache a matriz inversível $P$ tal que 
+\begin{gather}
+  P^{-1}AP =
+  \begin{pmatrix}
+    0&1&0 \\ 0&0&1 \\ -a_3&-a_2&-a_1
+  \end{pmatrix}\text{ e } P^{-1}B =
+  \begin{pmatrix}
+    0 \\ 0 \\ 1
+  \end{pmatrix}
+\end{gather} 
+ onde 
+\begin{gather}
+A=
+\begin{pmatrix}
+  2 & 3&  1\\
+ 0 & 4 & 2 \\
+ 1 & 0 & 2
+\end{pmatrix}\text{ e } B=
+\begin{pmatrix}
+  2 \\ 3 \\ 1
+\end{pmatrix}
+\end{gather}
 
-\quest
+\quest Mostre que se o par $(A,B)$ não é completamente estabilizável então o conjunto $\{ \omega(A+BK) : K\in \mathbb{R}^{m\times n}\}$ é limitado inferiormente.
 
-\quest
+\quest Usando o par $(A,B)$ do exercício anterior, encontre uma matriz $K$ de dimensão $1\times 3$ talque $\|\text{e}^{(A+BK)}x\| \leq 0.1\|x\|.$
 
 \end{document}
 

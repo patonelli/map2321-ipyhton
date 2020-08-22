@@ -1,0 +1,66 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+\usepackage{siunitx}
+
+\title[]{Matriz Simétrica}
+\author{Tópicos em controle}
+\institute{IME USP}
+\date{22 de agosto de 2020}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Um resultado sobre matriz simétrica}
+
+  Se $A$ é uma matriz simétrica então  
+  $$ \text{Ker}A = \text{Im}A^{\bot}$$
+  \begin{itemize}
+    \item $\text{Ker}A = \{x\in \mathbb{R}^n \text{ : }  Ax=0\}$
+    \item $\text{Im}A^\bot =\{ x \in \mathbb{R}^n \text{ : } x^T y = 0 \forall y \in \text{Im}A\}$
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+
+Se $x\in \text{Ker}A$ então:
+\begin{gather*}
+  \forall y = Av \implies x^Ty = x^T A v = (A^Tx)^Tv \\
+  = (Ax)^Tv = 0 \implies x\in \text{Im}A^\bot \\
+  \text{Ker}A \subseteq \text{Im}A^{\bot}
+\end{gather*}
+Se $x\in \text{Im}A^\bot$
+\begin{gather*}
+  0=x^TAe_i =(A^Tx)^T.e_i = (Ax)^T.e_i=0 \implies \\
+  Ax=0 \implies \text{Im}A^\bot \subseteq \text{Ker}A
+\end{gather*}
+
+
+\end{frame}
+
+
+\end{document}

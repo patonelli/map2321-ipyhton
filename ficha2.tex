@@ -1,0 +1,89 @@
+\documentclass{beamer}
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{default}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{default} % or try albatross, beaver, crane, ...
+  \usefonttheme{default}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+\usepackage{siunitx}
+
+\title[]{Lema 1}
+\author{Tópicos em controle}
+\institute{IME USP}
+\date{24 de agosto de 2020}
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Lema 1}
+
+ O lema 1 é muito interessante pois associa propriedades de um operador linear 
+ num espaço de dimensão infinita às propriedades de uma matriz!
+
+ Se $G: \mathbb{R} \to \mathbb{R}^{n\times m}$ é contínua e $\mathcal{C}([t_0,t_1], \mathbb{R}^m)$
+ é o nosso espaço vetorial de funções, então operador:
+ $$ \mathcal{L}(u(\cdot) )=\int_{t_0}^{t_1}G(s)u(s)ds $$
+ é um operador linear de 
+ $\mathcal{C}([t_0,t_1], \mathbb{R}^m)$ em $\mathbb{R}^n$
+  
+\end{frame}
+\begin{frame}
+\textbf{Lema 1:} Se $W(t_0,t_1) = \int_{t_0}^{t_1}G(t)G^T(t)dt$, então 
+$\text{Im}\mathcal{L} = \text{Im}W(t_0,t_1)$.
+
+\textit{Prova: }
+1. $\text{Im}W(t_0,t_1) \subseteq \text{Im}\mathcal{L}$, se $\mathbf{x} \in 
+\text{Im}W(t_0,t_1)$ então temos um $\mathbf{y} \in \mathbb{R}^n$ com
+$W(t_0,t_1)\mathbf{y} = \mathbf{x}$ e da definição de $W$ temos
+\begin{gather*}
+  W(t_0,t_1)\mathbf{y} = \int_{t_0}^{t_1}G(t)G^T(t)\mathbf{y}dt = \mathbf{x}\\
+  = \mathcal{L}(u(\cdot)) \text{ para } u(t) = G^T(t)\mathbf{y}
+\end{gather*}
+\end{frame}
+
+\begin{frame}
+  2. $\text{Im}\mathcal{L} \subseteq \text{Im}W(t_0,t_1)$
+
+  Se $\mathbf{x} \not\in \text{Im}W(t_0,t_1)$, usando o fato de que $W$ é simétrica,
+  podemos encontrar um $\mathbf{y}\neq 0$ tal que $W(t_0,t_1)\mathbf{y}=0$ e 
+  $\mathbf{y}^T\mathbf{x} \neq 0$.
+
+  Notemos então que:
+  \begin{gather*}
+    0= \mathbf{y}^TW(t_0,t_1)\mathbf{y} = \int_{t_0}^{t_1}(G^T(t)\mathbf{y})^T(G^T(t)\mathbf{y})dt \\
+    = \int_{t_0}^{t_1}\|G(t)^T\mathbf{y}\|^2 \implies \\
+    G(t)^T\mathbf{y}=0 \forall t\in[t_0,t_1]
+  \end{gather*}
+\end{frame}
+
+\begin{frame}
+  Se $\mathbf{x}$ estivesse em $\text{Im}\mathcal{L}$ então:
+  \begin{gather*}
+    \mathbf{x} = \int_{t_0}^{t_1}G(t)u(t)dt \implies \\
+    \mathbf{y}^T\mathbf{x}=\int_{t_0}^{t_1}\mathbf{y}^TG(t)u(t)dt = \\
+    = \int_{t_0}^{t_1} [G^T(t)\mathbf{y}]^Tu(t) dt = 0
+  \end{gather*}
+  Que contraria como foi escolhido o $\mathbf{y}$
+  assim fica demosntrado o lema $\qed$
+\end{frame}
+
+\end{document}

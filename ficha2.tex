@@ -86,4 +86,22 @@ $W(t_0,t_1)\mathbf{y} = \mathbf{x}$ e da definição de $W$ temos
   assim fica demosntrado o lema $\qed$
 \end{frame}
 
+\begin{frame}
+  Vamos considerar uma aplicação deste Lema.
+  considere a equação:
+  $$ \dot{\mathbf{z}}(t) = B(t)u(t)$$
+  então 
+  $$ \mathbf{z}(t) = \mathbf{z}_0 + \int_{t_0}^t B(s)u(s)ds \implies \mathbf{z}(t)-\mathbf{z}_0 = \int_{t_0}^t B(s)u(s)ds$$
+De forma que pelo Lema 1 existe $u(t)$ tal que $\mathbf{z}(t_1)=\mathbf{z}_1$ se e somente se 
+$\mathbf{z}_1 - \mathbf{z}_0 \in \text{Im}(W(t_0,t_1)) = \text{Im}(\int_{t_0}^{t_1}B(s)B^T(s)ds)$
+\end{frame}
+
+\begin{frame}
+  De fato, se $w\in \mathbb{R}^n $ é tal que $W(t_0,t_1)=\mathbf{z}_1 -\mathbf{z}_2$
+  então podemos tomar 
+  \begin{gather*}
+    u(t) = B^T(t)w \text{ poi neste caso }\\
+    \int_{t_0}^{t_1}B(s)u(s)ds = \int_{t_0}^{t_1}B(s)B^T(s)wds = W(t_0,t_1)w.
+  \end{gather*}
+\end{frame}
 \end{document}
